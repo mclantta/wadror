@@ -10,8 +10,11 @@ class Beer < ActiveRecord::Base
 			$ave += 0.0
 			$ave += rate.score
 		end	
-
 		$ave = "%.3g" % ($ave / rs.count)
-
 	end
+
+	def to_s
+		b = Brewery.find self.brewery_id
+		"#{self.name}, #{b.name}"
+	end	
 end
