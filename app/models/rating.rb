@@ -6,4 +6,6 @@ class Rating < ActiveRecord::Base
 		"#{b.name} #{self.score}"
 	end	
 
+
+
 end
