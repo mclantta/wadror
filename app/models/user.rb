@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
 	validates :password, length: { minimum: 4 },
 						format: { with: /(?=.*[A-Z])(?=.*[0-9])/ }
 	
-	has_many :ratings
+	has_many :ratings, dependent: :destroy
 	has_many :beers, through: :ratings
 end
