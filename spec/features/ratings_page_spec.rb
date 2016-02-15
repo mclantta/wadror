@@ -16,7 +16,6 @@ describe "Ratings page" do
 
 	end	
 
-
 	it "should show ratings count" do
 		visit ratings_path
 
