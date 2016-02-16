@@ -63,6 +63,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'webmock'
 end  
 
 ruby '2.3.0'
