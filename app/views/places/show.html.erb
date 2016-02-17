@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<% if @places %>
+	<% @places.each do |place| %>
+		<% Place.rendered_fields.each do |f| %>
+          <% if place.id == @place_id and f == :id %>
+          	<h1><%= place.name %></h1>
+          	<p><%= place.street %></p>
+          	<p><%= place.zip %> <%= place.city %></p>
+          	<iframe src="<%=place.blogmap%>"></iframe>
+          <% end %>
+        <% end %>
+    <% end %> 
+<% end %>       
+
+
+
